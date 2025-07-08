@@ -48,7 +48,7 @@ search_criteria = (2017, 1.6, 36000)
 
 filtered_cars = {}
 
-# метод .items честно нагуглила
+# метод .items для сортировки по ключу и значению Dictionary честно нагуглила
 for manifacturer, properties in car_data.items():
     if properties[1] >= search_criteria[0] and \
        properties[2] >= search_criteria[1] and \
@@ -59,7 +59,7 @@ print("Отфильтрованные автомобили:")
 print(filtered_cars)
 print()
 
-# пришлось спросить у Gemini как обратиться к индексу внутри второго кортежа - item[1][4]
+# тут пришлось спросить у Gemini как обратиться к индексу внутри второго кортежа - item[1][4]
 sorted_cars = sorted(filtered_cars.items(), key=lambda item: item[1][4])
 print("Отсортированные автомобили:")
 print(sorted_cars)
