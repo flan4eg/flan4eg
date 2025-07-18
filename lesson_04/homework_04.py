@@ -50,7 +50,6 @@ print("Task 3")
 print()
 
 adwentures_of_tom_sawer = adwentures_of_tom_sawer.split()
-print("!!!")
 print(adwentures_of_tom_sawer)
 adwentures_of_tom_sawer = " ".join(adwentures_of_tom_sawer)
 print(adwentures_of_tom_sawer)
