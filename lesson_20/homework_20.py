@@ -6,7 +6,7 @@ import pytest
 
 load_dotenv()
 
-@pytest.fixture
+@pytest.fixture(scope="session")
 def open_close_connection():
     dbname = 'postgres'
     user = 'postgres.yeztcaoftcgbqsblfqvn'
@@ -38,3 +38,8 @@ def test_connection(open_close_connection):
     cursor.execute("SELECT version();")
     record = cursor.fetchone()
     print("You are connected to - ", record)
+
+
+def test_version(open_close_connection):
+    connection, cursor = open_close_connection
+    cursor.execute("SELECT version();")
