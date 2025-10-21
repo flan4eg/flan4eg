@@ -22,6 +22,7 @@ def open_close_connection():
         host=host,
         port=port
     )
+
     print("Connected to the database successfully!")
 
     cursor = connection.cursor()
