@@ -1,0 +1,1 @@
+You have added  (9, 'Lamp', 'Lamp in Tiffany style', Decimal('200.00'), 1)
